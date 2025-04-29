@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sample Layout</title>
+    <title>Web Layout</title>
     <style>
         body {
             font-family: Arial, sans-serif;
         }
-        .container {
-            display: grid;
-            grid-template-areas:
-                "nav header header header"
-                "nav content content content"
-                "footer footer footer footer";
-            grid-template-columns: 1fr 3fr;
-            grid-template-rows: auto 1fr auto;
-            gap: 10px;
+        table {
+            width: 100%;
             height: 100vh;
+            border-collapse: collapse;
         }
-        .nav {
-            grid-area: nav;
-            background-color: #ccc;
+        td {
+            border: 1px solid #ccc;
             padding: 10px;
-            writing-mode: vertical-lr;
-            transform: rotate(180deg);
+        }
+        .sidebar {
+            width: 150px;
+            background-color: #d3d3d3;
+        }
+        .links a {
+            display: block;
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #f0f0f0;
             text-align: center;
-        }
-        .header {
-            grid-area: header;
-            background-color: #ddd;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .header a {
-            padding: 5px 10px;
-            background-color: white;
-            border: 1px solid #999;
             text-decoration: none;
+            border: 1px solid #999;
         }
-        .content {
-            grid-area: content;
-            background-color: #f9f9f9;
-            padding: 10px;
-            text-align: center;
-        }
-        .footer {
-            grid-area: footer;
-            background-color: #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        img {
+        .content img {
             max-width: 100%;
             height: auto;
+        }
+        .footer {
+            background-color: #aaa;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">Bottom Navigation | Copyright</div>
-        <div class="header">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-        </div>
-        <div class="content">
+
+<table>
+    <tr>
+        <td class="sidebar" rowspan="2">
+            <div class="links">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+            </div>
+        </td>
+        <td colspan="2">
+            <!-- Optional top space or heading -->
+        </td>
+    </tr>
+    <tr>
+        <td class="content">
             <p>Page content will appear here</p>
             <p><strong>WebTrainingRoom</strong></p>
-            <img src="your-image.jpg" alt="Sample Image">
-        </div>
-        <div class="footer">Footer Content</div>
-    </div>
+            <img src="your-image.jpg" alt="Image here">
+        </td>
+        <td>
+            <!-- Optional right sidebar -->
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" class="footer">
+            Bottom Navigation | Copyright
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
-Replace "your-image.jpg" with the actual path to your image file. Let me know if you want this in a different layout (like using tables or flexbox).
+Replace "your-image.jpg" with the correct image path. Want me to convert this into a modern CSS Flexbox/Grid layout too?
 
 
 
